@@ -39,7 +39,7 @@ myEvent.forEach(function(el, i){
         alert("Etudiant bien ajouté ! ");
         
     
-    window.location.href = '/Users/User/OneDrive/Desktop/Cours%20JS/BaseExamJS%20-%20FR/listUser.html';    
+    window.location.href = '/listUser.html';    
 
     });
 });
