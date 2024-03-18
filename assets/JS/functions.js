@@ -39,7 +39,7 @@ myEvent.forEach(function(el, i){
         alert("Etudiant bien ajouté ! ");
         
     
-    window.location.href = '/listUser.html';    
+    window.location.href = 'https://aurel5526.github.io/ProjetFinalAurelie/listUser.html';    
 
     });
 });
