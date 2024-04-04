@@ -64,7 +64,7 @@ function addStudent(){
               <td>${obj[j].nom}</td>
               <td>${obj[j].tz}</td>
               <td>${obj[j].date}</td>
-              <td><button type="button" class="btn btn-info" onclick="card()"> Creation de carte</button></td>
+              <td><button type="button" class="btn btn-info" onclick="card(${j})"> Creation de carte</button></td>
               <td><button type="button" class="btn-danger">X</button></td>
             </tr>`;
 
@@ -90,7 +90,17 @@ function addStudent(){
    
 };
 
-function card(){
+function card(j){
+    let newStudent1 = localStorage.getItem("etudiants");
+    let obj1 = JSON.parse(newStudent1);
+    console.log("nouveau1", j, obj1);
+
+    let card = `<h5 class="card-title mt-4 mb-0">Carte etudiant</h5>
+    <p class="card-text mb-2 font-weight-bold">Formation: ${obj1[j].cours}</p>
+    <p class="card-text mb-0 font-weight-bold">NOM ${obj1[j].nom}</p>
+    <p class="card-text m-0">ID: ${obj1[j].tz}</p>
+    <p class="card-text"><small class="text-muted">Valable ${obj1[j].date}</small></p>`
+    document.querySelector(".card-body").innerHTML= card;
     document.querySelector(".lightBox").style.display = "flex";
 };
 
